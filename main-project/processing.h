@@ -3,6 +3,6 @@
 
 #include "precipitation.h"
 
-int process(precipitation* array[], int month);
+long double process(precipitation* precipitations[], int size, int month);
 
-#endif 
+#endif

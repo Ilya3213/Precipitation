@@ -7,6 +7,7 @@ using namespace std;
 #include "file_reader.h"
 #include "constants.h"
 #include "filter.h"
+#include "processing.h"
 
 int main()
 {
@@ -45,6 +46,7 @@ int main()
         cout << "\nВыберите способ фильтрации или обработки данных:\n";
         cout << "1) Все дни, в которые шёл дождь.\n";
         cout << "2) Все дни, в которые объём осадков был меньше 1,5.\n";
+        cout << "3) Общее количество осадков за месяц.\n";
         cout << "\nВведите номер выбранного пункта: ";
         int item;
         cin >> item;
@@ -59,6 +61,15 @@ int main()
             check_function = check_results_by_value; // присваиваем в указатель на функцию соответствующую функцию
             cout << "***** Протокол использования сети Интернет после 8:00:00 *****\n\n";
             break;
+        case 3: {
+            cout << "***** Общее количество осадков за месяц *****\n\n";
+            cout << "Укажите месяц: ";
+            int param_month = 0;
+            cin >> param_month;
+            long double result = process(precipitations, size, param_month);
+            cout << "Количество осадков за указанный месяц (в мм): " << result << "\n\n";
+            break;
+        }
         default:
             throw "Некорректный номер пункта";
         }
