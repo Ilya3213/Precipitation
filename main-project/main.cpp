@@ -18,7 +18,7 @@ int main()
     try
     {
         read("data.txt", precipitations, size);
-        cout << "***** Библиотечный абонемент *****\n\n";
+        cout << "***** Осадки *****\n\n";
         for (int i = 0; i < size; i++)
         {
             /********** вывод даты **********/
