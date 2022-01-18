@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -17,14 +18,25 @@ int main()
     try
     {
         read("data.txt", precipitations, size);
+        cout << "***** Ѕиблиотечный абонемент *****\n\n";
         for (int i = 0; i < size; i++)
         {
+            /********** вывод даты **********/
+            cout << "ƒень............: ";
+            // вывод дн€
             cout << precipitations[i]->day.day << '\n';
+            cout << "ћес€ц...........: ";
+            // вывод мес€ца
             cout << precipitations[i]->day.month << '\n';
+            /********** вывод количества **********/
+            cout << " оличество......: ";
+            // вывод количества осадков в мм
             cout << precipitations[i]->value << '\n';
+            /********** вывод типа **********/
+            cout << "’арактеристика..: ";
+            // вывод типа осадков
             cout << precipitations[i]->type << '\n';
-            
-            cout << '\n';
+            cout << "\n";
         }
         for (int i = 0; i < size; i++)
         {
