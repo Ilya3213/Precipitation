@@ -36,7 +36,7 @@ namespace unittestproject
 			results[0] = build_result(8, 2.123);
 			results[1] = build_result(8, 2.123);
 			results[2] = build_result(8, 2.123);
-			Assert::AreEqual(6.369, process(results, 3, 8), 10);
+			Assert::AreEqual(6.369, process(results, 3, 8), 0.0001);
 			delete_result(results, 3);
 		}
 
@@ -46,7 +46,7 @@ namespace unittestproject
 			results[0] = build_result(8, 3.123);
 			results[1] = build_result(8, 2.123);
 			results[2] = build_result(8, 2.123);
-			Assert::AreEqual(7.369, process(results, 3, 8), 10);
+			Assert::AreEqual(7.369, process(results, 3, 8), 0.0001);
 			delete_result(results, 3);
 		}
 
@@ -56,7 +56,7 @@ namespace unittestproject
 			results[0] = build_result(8, 8.4124);
 			results[1] = build_result(8, 9.1241);
 			results[2] = build_result(8, 10.1512);
-			Assert::AreEqual(27.6877, process(results, 3, 8), 10);
+			Assert::AreEqual(27.6877, process(results, 3, 8), 0.0001);
 			delete_result(results, 3);
 		}
 
@@ -66,7 +66,7 @@ namespace unittestproject
 			results[0] = build_result(8, 8.4124);
 			results[1] = build_result(8, 9.1241);
 			results[2] = build_result(06, 10.1512);
-			Assert::AreEqual(17.5365, process(results, 3, 8), 10);
+			Assert::AreEqual(17.5365, process(results, 3, 8), 0.0001);
 			delete_result(results, 3);
 		}
 
@@ -76,7 +76,7 @@ namespace unittestproject
 			results[0] = build_result(05, 8.4124);
 			results[1] = build_result(8, 9.1241);
 			results[2] = build_result(06, 10.1512);
-			Assert::AreEqual(9.1241, process(results, 3, 8), 10);
+			Assert::AreEqual(9.1241, process(results, 3, 8), 0.0001);
 			delete_result(results, 3);
 		}
 
@@ -86,7 +86,7 @@ namespace unittestproject
 			results[0] = build_result(0, 8.4124);
 			results[1] = build_result(0, 9.1241);
 			results[2] = build_result(0, 10.1512);
-			Assert::AreEqual(0.0, process(results, 3, 8), 10);
+			Assert::AreEqual(0.0, process(results, 3, 8), 0.0001);
 			delete_result(results, 3);
 		}
 
@@ -96,7 +96,7 @@ namespace unittestproject
 			results[0] = build_result(-3, 8.4124);
 			results[1] = build_result(-6, 9.1241);
 			results[2] = build_result(-7, 10.1512);
-			Assert::AreEqual(0.0, process(results, 3, 6), 10);
+			Assert::AreEqual(0.0, process(results, 3, 6), 0.0001);
 			delete_result(results, 3);
 		}
 	};
